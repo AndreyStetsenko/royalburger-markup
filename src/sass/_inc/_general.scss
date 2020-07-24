@@ -1,0 +1,377 @@
+@import "_helpers";
+
+button:focus {
+  outline: none;
+}
+
+// Top bar
+
+.topbar {
+  background-color: $uss-d;
+
+  .topbar-right-col {
+    justify-content: flex-end;
+    .topbar-cont {
+    }
+  }
+
+  .topbar-col {
+    padding: 6px 25px;
+    display: flex;
+    align-items: center;
+
+    .topbar-cont {
+      display: flex;
+
+      .topbar-item {
+        color: $tb-link;
+        font-size: 13px;
+        padding: 0 8px;
+        transition: .2s;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &:hover {
+          color: $tb-link-h;
+        }
+
+        &__link {
+          color: $tb-link;
+          text-decoration: none;
+          transition: .2s;
+
+          .ico {
+            margin-right: 5px;
+            transform: rotate(90deg);
+          }
+
+          &:hover {
+            color: $tb-link-h;
+          }
+        }
+      }
+      .topbar-nav {
+        padding: 0 0 0 15px;
+        margin: 0;
+        list-style: none;
+
+        li {
+          display: inline;
+
+          a {
+            font-size: 13px;
+            padding: 0 3px;
+            text-decoration: none;
+            color: $tb-link;
+            transition: .2s;
+
+            &:hover {
+              color: $tb-link-h;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Nav bar (header navigation)
+
+.navbar {
+  &.navbar-dark {
+    background-color: $uss !important;
+  }
+
+  .navbar-brand {
+    font-size: 16px;
+
+    img {
+      max-width: 52px;
+      margin-right: 15px;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    transition: .2s;
+
+    .navbar-toggler-burger {
+
+      .burger-line {
+        width: 30px;
+        height: 3px;
+        border-radius: 10px;
+        background: $tb-link;
+        transition: .3s;
+
+        &--2 {
+          margin: 7px 0;
+        }
+      }
+    }
+
+    &.open {
+      .navbar-toggler-burger {
+        height: 23px;
+        width: 30px;
+        position: relative;
+
+        .burger-line {
+          &--1 {
+            top: 10px;
+            width: 30px;
+            height: 4px;
+            position: absolute;
+            transform: rotate(-45deg);
+          }
+
+          &--2 {
+            top: 3px;
+            width: 30px;
+            height: 4px;
+            position: absolute;
+            transform: rotate(45deg);
+          }
+
+          &--3 {
+            opacity: 0;
+            bottom: 0;
+            position: absolute;
+            // margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .navbar-nav {
+    li {
+      &.dropdown {
+        > a:after {
+          display: none;
+        }
+      }
+
+      > a {
+        font-size: 16px;
+        padding-left: 16px!important;
+        padding-right: 16px!important;
+        color: #fff!important;
+        transition: .2s;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          color: $tb-link-h !important;
+        }
+      }
+    }
+
+    .dropdown-divider {
+      opacity: .3;
+    }
+
+    .dropdown-menu {
+      margin: 0;
+      border: 0;
+      border-radius: 0;
+      // background-color: $uss-d;
+
+      a {
+        font-size: 14px;
+        color: $tb-link;
+        background: transparent;
+        transition: .2s;
+
+        &:hover {
+          color: $tb-link-h;
+        }
+      }
+    }
+  }
+}
+
+// Nav USS
+
+.navbar-uss {
+  background-color: #fff !important;
+
+  .navbar-nav {
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    li {
+      &.dropdown {
+        > a:after {
+          display: none;
+        }
+      }
+
+      > a {
+        font-size: 16px;
+        padding-left: 25px!important;
+        padding-right: 25px!important;
+        color: $tb-link !important;
+        font-weight: 400;
+        transition: .2s;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          color: $tb-link-h !important;
+        }
+      }
+    }
+
+    .dropdown-divider {
+      opacity: .3;
+    }
+  }
+}
+
+
+.dropdown-menu {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+  a {
+    font-size: 14px;
+    color: $tb-link;
+    background: transparent;
+    transition: .2s;
+
+    &:hover {
+      color: $tb-link-h;
+    }
+  }
+}
+
+// Slider
+
+.swiper-container {
+  .swiper-pagination {
+    &-bullet {
+      background: $black-4;
+      opacity: 1;
+      width: 7px;
+      height: 7px;
+      margin: 0 3px;
+
+      &-active {
+        background: $gold;
+      }
+    }
+  }
+
+  .swiper-button {
+    &-next {
+      right: 50px;
+      left: auto;
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 100%;
+      transition: .2s;
+
+      &:hover {
+        right: 48px;
+      }
+
+      &::after {
+        font-size: 24px;
+        font-weight: 900;
+        color: $uss;
+      }
+    }
+
+    &-prev {
+      right: auto;
+      left: 50px;
+      width: 45px;
+      height: 45px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 100%;
+      transition: .2s;
+
+      &:hover {
+        left: 48px;
+      }
+
+      &::after {
+        font-size: 24px;
+        font-weight: 900;
+        color: $uss;
+      }
+    }
+  }
+}
+
+// Price Services
+
+.price-services {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &-item {
+    width: 310px;
+    height: 685px;
+    position: relative;
+    padding: 25px 30px;
+    background: $light-w;
+    box-shadow: 3px 7px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    border: 1px solid $light-w;
+    transition: .2s;
+
+    &:hover {
+      border: 1px solid $gold;
+    }
+
+    &--title {
+      font-weight: bold;
+      font-size: 24px;
+      text-align: center;
+      color: $uss;
+      margin-bottom: 25px;
+    }
+
+    &--image {
+      margin-bottom: 20px;
+
+      img {
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+// Footer
+
+footer {
+  width: 100%;
+  padding: 25px 0;
+  background-color: $uss-d;
+  position: absolute;
+
+  .footer-copyright {
+    text-align: center;
+
+    span {
+      color: #fff;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+}

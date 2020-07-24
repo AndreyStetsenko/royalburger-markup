@@ -1,0 +1,110 @@
+// Большие девайсы (xl большие десктопы, >= 1200px)
+@media (min-width: 1200px) {
+
+  .navbar {
+    > .container {
+      padding-left: 30px;
+      padding-right: 15px;
+    }
+  }
+
+}
+
+// Большие девайсы (lg большие десктопы, >= 992px)
+@media (max-width: 1199.98px) {
+
+  .navbar {
+    > .container {
+      padding-left: 30px;
+      padding-right: 15px;
+    }
+  }
+
+}
+
+// Средние девайсы (md «таблетки», >= 768px)
+@media (min-width: 991.98px) {
+  .navbar {
+    .mob-show {
+      display: none;
+    }
+
+    .dropdown:hover > .dropdown-menu {
+      display: block;
+    }
+  }
+
+  .navbar-uss {
+    .navbar-brand {
+      display: none;
+    }
+  }
+
+}
+
+@media (max-width: 991.98px) {
+
+  .navbar-collapse {
+    display: block!important;
+    position: absolute;
+    top: 0;
+    left: -400px;
+  }
+
+  .open-nav {
+    position: absolute;
+    top: 0;
+    left: 0px;
+  }
+
+  .tobar-toggle {
+    display: none;
+  }
+
+  .navbar {
+    > .container {
+      padding-left: 30px;
+      padding-right: 15px;
+    }
+
+    .navbar-nav {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+}
+
+// Малые девайсы (sm «ландшафтные», >= 575px)
+@media (max-width: 767.98px) {
+
+  .topbar {
+    .mob-hide {
+      display: none;
+    }
+  }
+
+  .navbar {
+    .navbar-brand {
+      color: #fff;
+      font-weight: 500;
+
+      img {
+        width: 50px;
+      }
+    }
+  }
+
+}
+
+// Экстрамалые девайсы («портретные телефоны», < 576px)
+@media (max-width: 575.98px) {
+
+  .navbar {
+    > .container {
+      padding-left: 15px;
+      padding-right: 0;
+    }
+  }
+
+}

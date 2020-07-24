@@ -1,0 +1,45 @@
+// Colors
+
+$uss: #393838;
+$uss-d: #282828;
+
+$gold: #B0976D;
+
+$tb-link: #6F6F6F;
+$tb-link-h: #333333;
+
+$light-gray: #E5E5E5;
+$dark-gray: #B5B5B5;
+$black-4: #2B2A2A;
+
+$light-w: #FEFEFE;
+
+// Fonts
+
+// Title
+
+.title-main {
+  width: 100%;
+  text-align: center;
+
+  &-black {
+    background: $black-4;
+
+    .title-main--title {
+      color: $gold;
+    }
+  }
+
+  &--title {
+    padding: 30px 0;
+    font-size: 36px;
+    font-weight: 300;
+    color: $black-4;
+    font-family: 'Roboto';
+  }
+}
+
+// @import "fonts";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
